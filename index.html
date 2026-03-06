@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- Aqui definimos o tipo de documento e idioma -->
+<html lang="pt-br">
+
+<head>
+    <!-- Área de metadados e configurações do documento -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura viewport para responsividade -->
+    <meta name="author" content="Erik Richard, Felipe Neto, Tiago Lacerda, Gustavo Mioto, Vitor Belfort"> <!-- Autores do site -->
+    <meta name="keywords" content="Design, Gráfica, Impressão"> <!-- Palavras-chave para SEO -->
+    <meta name="description" content="AVA1 - Front End - A Criativa Gráfica Rápida"> <!-- Descrição do site -->
+    <title>A Criativa Gráfica Rápida</title> <!-- Título que aparece na aba do navegador -->
+    
+    <!-- Links para recursos externos -->
+    <link rel="stylesheet" href="style.css"> <!-- Arquivo CSS principal -->
+    <link rel="shortcut icon" href="/Imagens/logo_empresa.png" type="image/png"> <!-- Ícone da aba -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> <!-- Biblioteca de ícones -->
+</head>
+
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <div>
+            <!-- Logo da empresa -->
+            <img class="img_logo" src="/Imagens/logo_empresa.png" alt="Logo da Gráfica">
+        </div>
+
+        <!-- Botão de área do cliente -->
+        <div class="div_flex">
+            <button id="botao_login" onclick="mudar()">Área de Cliente</button>
+        </div>
+    </header>
+
+    <!-- Barra de navegação principal -->
+    <nav>
+        <a href="/index.html">Início</a> <!-- Link para página inicial -->
+        <a href="#FaleConosco">Fale Conosco</a> <!-- Link âncora para seção de contato -->
+        <a href="/Paginas/produto/produto.html">Produtos</a> <!-- Link para página de produtos -->
+        
+        <!-- Botão para alternar modo claro/escuro -->
+        <div class="div_flex">
+            <button id="trocar_iluminacao" onclick="alternarModo()">
+                <i id="lampadaEscura" class="fa-solid fa-lightbulb"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Seção de vídeo de fundo -->
+    <div class="video-container">
+        <video autoplay muted loop> <!-- Vídeo que roda automaticamente em loop -->
+            <source src="/Video/grafica_trampando.mp4" type="video/mp4">
+            Seu navegador não abre videos! <!-- Mensagem alternativa caso o vídeo não carregue -->
+        </video>
+        <!-- Efeito de sombreamento no vídeo -->
+        <div class="video_sombreamento"></div>
+    </div>
+
+    <!-- Conteúdo principal do site -->
+    <main>
+        <!-- Primeira seção - Apresentação -->
+        <section>
+            <h1>A Criativa Gráfica</h1>
+            <p>Impressões de alta qualidade para você e seu negócio</p>
+            <!-- Botão CTA (Call to Action) -->
+            <a href="/Paginas/login/login.html"><button><strong>Fale com um de nossos epecialistas</strong></button></a>
+        </section>
+
+        <!-- Seção de serviços oferecidos -->
+        <section>
+            <h2>Serviços</h2>
+            <ul>
+                <li>Impressão de <strong>Cartões de Visita</strong> e <strong>Folders</strong></li>
+                <img src="/Imagens/cartão_visita_2.png" width="320" alt="Cartões de visita">
+
+                <li>Design Gráfico <strong>Profissional</strong> para identidade visual</li>
+                <img src="/Imagens/folders.jpg" width="320" alt="Folders">
+
+                <li><strong>Banners</strong>, <strong>Adesivos</strong> e <strong>Faixas Personalizadas</strong></li>
+
+                <li>Design Gráfico <strong>Profissional</strong> para identidade visual</li>
+                <img src="/Imagens/banners2.png" width="320" alt="Folders">
+
+                <li>Impressão de <strong>Brindes Personalizados</strong></li>
+                <img src="/Imagens/lembrancinha.jpeg" width="320" alt="Exemplos de brindes personalizados">
+            </ul>
+        </section>
+
+        <!-- Seção de diferenciais -->
+        <section id="PorqueNosEscolher">
+            <h2>Por que nos escolher?</h2>
+            <ul>
+                <li>Qualidade <strong>Superior</strong> em todos os materiais</li>
+                <p>Utilizamos equipamentos modernos e materiais de alta durabilidade.</p>
+                <img src="/Imagens/impressora.jpg" alt="Materiais gráficos de qualidade">
+
+                <li><strong>Atendimento Personalizado</strong> para cada cliente</li>
+                <p>Cada projeto é único e tratamos com o cuidado que ele merece.</p>
+                <img src="/Imagens/atendimento_cliente.jpg" alt="Atendimento personalizado ao cliente">
+
+                <li><strong>Entregas Rápidas</strong> e garantia de prazos</li>
+                <p>Somos pontuais e prezamos pela agilidade com responsabilidade.</p>
+                <img src="/Imagens/entrega_rapida.jpg" alt="Ilustração de entrega rápida">
+
+                <li><strong>Equipe A Criativa e Profissional</strong></li>
+                <p>Contamos com designers e operadores de impressão experientes.</p>
+                <img src="/Imagens/equipe_trabalhando.jpeg" alt="Equipe criativa da gráfica">
+            </ul>
+        </section>
+
+        <!-- Seção de depoimentos -->
+        <section>
+            <h2>Depoimentos</h2>
+            <ul>
+                <li>
+                    <img src="Imagens/depoimento 2.jpg" width="70" alt="">
+                    <strong>Lucas Almeida</strong>
+                    <address>São Paulo, SP</address>
+                    <p>"Fiquei impressionado com a qualidade das impressões e o acabamento. Excelente trabalho!"</p>
+                </li>
+
+                <li>
+                    <img src="Imagens/Depoimento 1.avif" width="70" alt="">
+                    <strong>Fernanda Costa</strong>
+                    <address>Curitiba, PR</address>
+                    <p>"A gráfica entregou tudo antes do prazo e com um design incrível. Muito satisfeita."</p>
+                </li>
+
+                <li>
+                    <img src="Imagens/depoimento 6.avif" width="65" alt="">
+                    <strong>Robson Teles</strong>
+                    <address>Salvador, BA</address>
+                    <p>"Excelente atendimento e resultado impecável nos materiais de divulgação."</p>
+                </li>
+
+                <li>
+                    <img src="Imagens/depoimento 3.jpg" width="70" alt="">
+                    <strong>Camila Borges</strong>
+                    <address>Belo Horizonte, MG</address>
+                    <p>"Já é a terceira vez que faço materiais com eles e sempre superam minhas expectativas."</p>
+                </li>
+
+                <li>
+                    <img src="Imagens/depoimento 4.webp" width="70" alt="">
+                    <strong>Eduardo Lima</strong>
+                    <address>Porto Alegre, RS</address>
+                    <p>"Recomendo demais! A qualidade das faixas e banners foi perfeita."</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Seção de contato -->
+        <section id="FaleConosco">
+            <h2>Fale Conosco</h2>
+            <form id="form" method="post" action="#">
+                <label for="ideia">Envie seu projeto e receba um orçamento gratuito:</label><br>
+                <input type="text" id="ideia" name="ideia" placeholder="Cartões, Faixas, Brindes..." required><br><br>
+
+                <label for="email">Seu email:</label><br>
+                <input type="email" id="email" name="email" placeholder="email@gmail.com" required><br><br>
+
+                <button type="submit" onclick="enviar()">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Botão flutuante para voltar ao topo -->
+        <button id="voltar-topo" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+
+        <!-- Rodapé do site -->
+        <footer>
+            <div>
+                <h3>Sobre nós</h3>
+                <p>Gráfica especializada em impressões de alta qualidade e soluções criativas.</p>
+            </div>
+
+            <div>
+                <h3>Redes sociais</h3>
+                <!-- Links para redes sociais -->
+                <a href="https://www.instagram.com/acriativagraf/" target="_blank">Instagram</a><br>
+                <a href="https://wa.me/5571985077119?text=Olá%2C%20gostaria%20de%20mais%20informações!"
+                    target="_blank">WhatsApp</a><br>
+                <!-- Links para localizações -->
+                <a href="https://www.google.com/maps/place/A+Criativa+Gráfica+Rápida/@-12.976092,-38.4953796,19z/data=!3m1!4b1!4m6!3m5!1s0x71604cfe29fda07:0x352d3ac0cf9034d3!8m2!3d-12.9760933!4d-38.4947345!16s%2Fg%2F1ptydl3cg?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank">Localização: Matatu de Brotas - Salvador/BA</a><br>
+                <a href="https://www.google.com/maps/place/A+Criativa+Gráfica+Rápida+2+Nova+Brasília/@-12.9187167,-38.4111908,17z/data=!3m1!4b1!4m6!3m5!1s0x71611b4ff86e5eb:0x5c8427a440bc6816!8m2!3d-12.9187219!4d-38.4086105!16s%2Fg%2F11mhjtlxtj?entry=ttu&g_ep=EgoyMDI1MDYzMC.0wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank">Localização: Nova Brasilia - Salvador/BA</a><br>
+                <a href="https://github.com/Tiago-Aragao/AVA1_FrontEndGT.git" target="_blank">GitHub</a>
+            </div>
+
+            <div>
+                <p>&copy; 2025 A Criativa Gráfica</p> <!-- Copyright -->
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scripts JavaScript -->
+    <script src="/script.js"></script> <!-- Script principal -->
+    <script src="/modoescuro.js"></script> <!-- Script para alternar modo claro/escuro -->
+</body>
+</html>

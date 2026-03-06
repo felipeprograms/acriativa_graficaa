@@ -1,0 +1,336 @@
+/* VARIÁVEIS DE TEMA - Define as cores padrão do tema claro */
+:root {
+  --cor-fundo-body: #fff; /* Cor de fundo principal branca */
+  --cor-texto-body: #333; /* Cor do texto principal escura */
+  --cor-header: #fdd835; /* Cor do cabeçalho (amarelo) */
+  --cor-nav: #fffde7; /* Cor da barra de navegação (amarelo claro) */
+  --cor-botao-light: #fbc02d; /* Cor do botão de tema (amarelo) */
+  --cor-link: #fbc02d; /* Cor dos links (amarelo) */
+  --cor-link-hover: #fff; /* Cor dos links no hover (branco) */
+  --cor-link-bg-hover: #fbc02d; /* Fundo dos links no hover (amarelo) */
+  --cor-card-bg: #fff; /* Cor de fundo dos cards (branco) */
+  --cor-card-boxshadow: rgba(0, 0, 0, 0.1); /* Sombra dos cards */
+  --cor-titulo: #fbc02d; /* Cor dos títulos (amarelo) */
+  --cor-label: #fbc02d; /* Cor dos labels (amarelo) */
+  --cor-input-bg: #fff; /* Cor de fundo dos inputs (branco) */
+  --cor-input-borda: #ccc; /* Cor da borda dos inputs (cinza) */
+  --cor-input-texto: #000; /* Cor do texto dos inputs (preto) */
+  --cor-botao: #fbc02d; /* Cor principal dos botões (amarelo) */
+  --cor-botao-hover: #fdd835; /* Cor dos botões no hover (amarelo claro) */
+  --cor-footer-bg: #fdd835; /* Cor de fundo do rodapé (amarelo claro) */
+  --cor-footer-texto: #000; /* Cor do texto do rodapé (preto) */
+  --cor-footer-hover: #fff; /* Cor dos links no hover (branco) */
+}
+
+/* TEMA ESCURO - Sobrescreve as variáveis para o modo escuro */
+body.modo-escuro {
+  --cor-fundo-body: #121212; /* Fundo escuro */
+  --cor-texto-body: #e0e0e0; /* Texto claro para contraste */
+  --cor-header: #333; /* Cabeçalho cinza escuro */
+  --cor-nav: #1e1e1e; /* Barra de navegação quase preta */
+  --cor-botao-light: #fbc02d; /* Mantém botão amarelo */
+  --cor-link: #fdd835; /* Links amarelos claros */
+  --cor-link-hover: #000; /* Texto preto no hover */
+  --cor-link-bg-hover: #fdd835; /* Fundo amarelo no hover */
+  --cor-card-bg: #1f1f1f; /* Cards com fundo escuro */
+  --cor-card-boxshadow: rgba(255, 255, 255, 0.05); /* Sombra clara sutil */
+  --cor-titulo: #fdd835; /* Títulos amarelos */
+  --cor-label: #fdd835; /* Labels amarelos */
+  --cor-input-bg: #2c2c2c; /* Fundo escuro dos inputs */
+  --cor-input-borda: #555; /* Bordas mais claras */
+  --cor-input-texto: #fff; /* Texto branco nos inputs */
+  --cor-botao: #fbc02d; /* Botões amarelos */
+  --cor-botao-hover: #fdd835; /* Hover amarelo claro */
+  --cor-footer-bg: #333; /* Rodapé escuro */
+  --cor-footer-texto: #ccc; /* Texto cinza claro */
+  --cor-footer-hover: #fff; /* Links brancos no hover */
+}
+
+/* RESET - Remove estilos padrão dos navegadores */
+* {
+  margin: 0; /* Remove margens */
+  padding: 0; /* Remove paddings */
+  box-sizing: border-box; /* Modelo de caixa mais intuitivo */
+}
+
+/* BODY - Estilos base da página */
+body {
+  font-family: Arial, sans-serif; /* Fonte principal */
+  background-color: var(--cor-fundo-body); /* Cor de fundo */
+  color: var(--cor-texto-body); /* Cor do texto */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  height: 100vh; /* Altura total da viewport */
+  display: flex; /* Layout flexível */
+  flex-direction: column; /* Organização em coluna */
+}
+
+/* HEADER - Cabeçalho da página */
+header {
+  background-color: var(--cor-header); /* Cor do header */
+  height: 100px; /* Altura fixa */
+  display: flex; /* Layout flexível */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 0 20px; /* Padding lateral */
+}
+
+/* LOGO - Estilos da imagem do logo */
+.img_logo {
+  margin: 10px 0 10px 10px; /* Margens personalizadas */
+  padding: 0; /* Sem padding */
+  height: 70px; /* Altura fixa */
+  width: 70px; /* Largura fixa */
+  border-radius: 50%; /* Formato circular */
+  object-fit: cover; /* Ajuste da imagem */
+  border: none; /* Sem borda */
+  box-shadow: none; /* Sem sombra */
+  background-color: transparent; /* Fundo transparente */
+}
+
+/* NAV - Barra de navegação */
+nav {
+  background-color: var(--cor-nav); /* Cor de fundo */
+  position: sticky; /* Fixa ao rolar */
+  top: 0; /* Cola no topo */
+  left: 0; /* Alinhamento à esquerda */
+  width: 100%; /* Largura total */
+  display: flex; /* Layout flexível */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 20px; /* Espaço entre itens */
+  padding: 15px 0; /* Espaçamento vertical */
+  z-index: 1000; /* Camada de sobreposição */
+  box-shadow: 0 2px 8px var(--cor-card-boxshadow); /* Sombra sutil */
+}
+
+/* LINKS DA NAVEGAÇÃO */
+nav a {
+  color: var(--cor-link); /* Cor do link */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: 600; /* Peso da fonte */
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; /* Fontes alternativas */
+  font-size: 1.1rem; /* Tamanho da fonte */
+  padding: 8px 14px; /* Espaçamento interno */
+  margin: 0 6px; /* Margem lateral */
+  border-radius: 6px; /* Bordas arredondadas */
+  transition: all 0.3s ease-in-out; /* Transição suave */
+  display: inline-block; /* Permite padding/margin */
+  letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+
+/* EFEITO HOVER NOS LINKS */
+nav a:hover {
+  color: var(--cor-link-hover); /* Muda cor do texto */
+  background-color: var(--cor-link-bg-hover); /* Muda fundo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+}
+
+/* LINK ATIVO */
+nav a.active {
+  color: var(--cor-link-hover); /* Cor do texto */
+  background-color: var(--cor-link-bg-hover); /* Cor de fundo */
+}
+
+/* BOTÃO TROCA DE ILUMINAÇÃO */
+#trocar_iluminacao {
+  position: fixed; /* Posição fixa na tela */
+  top: 110px; /* Distância do topo (abaixo da nav) */
+  right: 30px; /* Distância da direita */
+  background-color: var(--cor-botao-light); /* Cor de fundo */
+  color: #000; /* Texto preto */
+  border: none; /* Sem borda */
+  border-radius: 50%; /* Formato circular */
+  padding: 0.8rem; /* Espaçamento interno */
+  font-size: 1.2rem; /* Tamanho do ícone */
+  cursor: pointer; /* Cursor de clique */
+  z-index: 1001; /* Sobreposição acima da nav */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
+  display: flex; /* Layout flexível */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  width: 50px; /* Largura fixa */
+  height: 50px; /* Altura fixa */
+  transition: all 0.3s ease; /* Transição suave */
+}
+
+/* EFEITO HOVER NO BOTÃO */
+#trocar_iluminacao:hover {
+  background-color: #fff; /* Fundo branco */
+  transform: scale(1.1); /* Aumenta ligeiramente */
+}
+
+/* BOTÃO NO MODO ESCURO */
+body.modo-escuro #trocar_iluminacao {
+  background-color: var(--cor-botao-light); /* Mantém cor amarela */
+  color: #000; /* Texto preto */
+}
+
+/* EFEITO HOVER NO MODO ESCURO */
+body.modo-escuro #trocar_iluminacao:hover {
+  background-color: #fff; /* Fundo branco */
+}
+
+/* CONTAINER DE SUPORTE - Área principal */
+.suporte-container {
+  flex: 1; /* Ocupa espaço disponível */
+  display: flex; /* Layout flexível */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  background-color: var(--cor-fundo-body); /* Cor de fundo */
+  padding: 40px 20px; /* Espaçamento interno */
+}
+
+/* CARD DE SUPORTE - Formulário */
+.suporte-card {
+  background-color: var(--cor-card-bg); /* Cor de fundo */
+  padding: 40px; /* Espaçamento interno */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 4px 20px var(--cor-card-boxshadow); /* Sombra */
+  max-width: 600px; /* Largura máxima */
+  width: 100%; /* Largura responsiva */
+}
+
+/* TÍTULO DO CARD */
+.suporte-card h2 {
+  color: var(--cor-titulo); /* Cor do título */
+  margin-bottom: 25px; /* Espaço inferior */
+  text-align: center; /* Alinhamento central */
+}
+
+/* FORMULÁRIO - Labels */
+.suporte-card label {
+  color: var(--cor-label); /* Cor do label */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 5px; /* Espaço inferior */
+  display: block; /* Ocupa linha inteira */
+}
+
+/* FORMULÁRIO - Inputs e selects */
+.suporte-card input[type="text"],
+.suporte-card select,
+.suporte-card textarea {
+  padding: 10px; /* Espaçamento interno */
+  width: 100%; /* Largura total */
+  margin-bottom: 20px; /* Espaço inferior */
+  border: 1px solid var(--cor-input-borda); /* Borda */
+  border-radius: 4px; /* Bordas arredondadas */
+  background-color: var(--cor-input-bg); /* Cor de fundo */
+  color: var(--cor-input-texto); /* Cor do texto */
+}
+
+/* TEXTAREA - Área de texto */
+.suporte-card textarea {
+  resize: vertical; /* Permite redimensionar verticalmente */
+  min-height: 100px; /* Altura mínima */
+}
+
+/* GRUPO DE RADIO BUTTONS */
+.radio-group {
+  margin-bottom: 20px; /* Espaço inferior */
+}
+
+/* TÍTULO DO GRUPO */
+.radio-group p {
+  color: var(--cor-label); /* Cor do texto */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 10px; /* Espaço inferior */
+}
+
+/* LABEL DOS RADIOS */
+.radio-label {
+  display: flex; /* Layout flexível */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 8px; /* Espaço entre elementos */
+  cursor: pointer; /* Cursor de clique */
+  margin-right: 15px; /* Espaço à direita */
+}
+
+/* ESTILO DOS RADIOS */
+.radio-label input[type="radio"] {
+  accent-color: var(--cor-botao); /* Cor do radio button */
+}
+
+/* BOTÕES DO FORMULÁRIO */
+.suporte-card button {
+  width: 100%; /* Largura total */
+  background-color: var(--cor-botao); /* Cor de fundo */
+  color: #000; /* Texto preto */
+  padding: 12px; /* Espaçamento interno */
+  border: none; /* Sem borda */
+  font-weight: bold; /* Negrito */
+  font-size: medium; /* Tamanho médio */
+  border-radius: 6px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de clique */
+  transition: background-color 0.3s; /* Transição suave */
+  margin-top: 10px; /* Espaço superior */
+}
+
+/* EFEITO HOVER NOS BOTÕES */
+.suporte-card button:hover {
+  background-color: var(--cor-botao-hover); /* Muda cor de fundo */
+}
+
+/* LINK VOLTAR */
+.link-voltar {
+  display: inline-block; /* Permite padding */
+  background-color: var(--cor-botao); /* Cor de fundo */
+  color: #000; /* Texto preto */
+  padding: 6px 0; /* Espaçamento vertical */
+  font-weight: bold; /* Negrito */
+  border-radius: 6px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de clique */
+  transition: background-color 0.3s; /* Transição suave */
+  text-decoration: none; /* Remove sublinhado */
+  text-align: center; /* Alinhamento central */
+  width: 100%; /* Largura total */
+  margin-top: 10px; /* Espaço superior */
+}
+
+/* EFEITO HOVER NO LINK */
+.link-voltar:hover {
+  background-color: var(--cor-botao-hover); /* Muda cor de fundo */
+}
+
+/* RODAPÉ */
+footer {
+  background-color: var(--cor-footer-bg); /* Cor de fundo */
+  padding: 20px; /* Espaçamento interno */
+  text-align: center; /* Alinhamento central */
+  color: var(--cor-footer-texto); /* Cor do texto */
+}
+
+/* LINKS DO RODAPÉ */
+footer a {
+  color: var(--cor-footer-texto); /* Cor do link */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+/* EFEITO HOVER NOS LINKS */
+footer a:hover {
+  color: var(--cor-footer-hover); /* Muda cor do texto */
+  cursor: pointer; /* Cursor de clique */
+}
+
+/* DIVS DO RODAPÉ */
+footer div {
+  margin: 10px 0; /* Espaçamento vertical */
+}
+
+/* RESPONSIVO - Telas até 600px */
+@media (max-width: 600px) {
+  .suporte-card {
+    padding: 20px; /* Reduz padding */
+  }
+
+  nav {
+    flex-wrap: wrap; /* Quebra de linha */
+    gap: 10px; /* Reduz espaço entre itens */
+  }
+
+  .radio-label {
+    margin-bottom: 8px; /* Espaço inferior */
+  }
+}
+
+/* SELECT - Cursor pointer */
+.select {
+  cursor: pointer; /* Cursor de clique */
+}

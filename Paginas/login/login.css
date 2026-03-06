@@ -1,0 +1,284 @@
+/* VARIÁVEIS DE TEMA - Define as cores padrão do tema claro */
+:root {
+  --cor-fundo-body: #fff; /* Cor de fundo do body */
+  --cor-texto-body: #333; /* Cor do texto principal */
+  --cor-header: #fdd835; /* Cor do cabeçalho */
+  --cor-nav: #fffde7; /* Cor da barra de navegação */
+  --cor-botao-light: #fbc02d; /* Cor do botão de tema claro */
+  --cor-link: #fbc02d; /* Cor dos links */
+  --cor-link-hover: #fff; /* Cor dos links no hover */
+  --cor-link-bg-hover: #fbc02d; /* Cor de fundo dos links no hover */
+  --cor-login-container-bg: #fff; /* Cor de fundo do container de login */
+  --cor-login-card-bg: #fff; /* Cor de fundo do card de login */
+  --cor-login-boxshadow: rgba(0, 0, 0, 0.1); /* Sombra do card de login */
+  --cor-login-titulo: #fbc02d; /* Cor do título do login */
+  --cor-label: #fbc02d; /* Cor dos labels do formulário */
+  --cor-input-bg: #fff; /* Cor de fundo dos inputs */
+  --cor-input-borda: #ccc; /* Cor da borda dos inputs */
+  --cor-input-texto: #000; /* Cor do texto dos inputs */
+  --cor-botao: #fbc02d; /* Cor principal dos botões */
+  --cor-botao-hover: #fdd835; /* Cor dos botões no hover */
+  --cor-footer-bg: #fdd835; /* Cor de fundo do footer */
+  --cor-footer-texto: #000; /* Cor do texto do footer */
+  --cor-footer-link-hover: #fff; /* Cor dos links do footer no hover */
+}
+
+/* TEMA ESCURO - Sobrescreve as variáveis para o modo escuro */
+body.modo-escuro {
+  --cor-fundo-body: #121212; /* Fundo escuro para o body */
+  --cor-texto-body: #e0e0e0; /* Texto claro para melhor contraste */
+  --cor-header: #333; /* Cabeçalho mais escuro */
+  --cor-nav: #1e1e1e; /* Barra de navegação quase preta */
+  --cor-botao-light: #fbc02d; /* Mantém o botão amarelo */
+  --cor-link: #fdd835; /* Links em amarelo mais claro */
+  --cor-link-hover: #000; /* Texto preto no hover */
+  --cor-link-bg-hover: #fdd835; /* Fundo amarelo no hover */
+  --cor-login-container-bg: #1a1a1a; /* Fundo escuro do container */
+  --cor-login-card-bg: #222; /* Card de login mais escuro */
+  --cor-login-boxshadow: rgba(255, 255, 255, 0.05); /* Sombra sutil */
+  --cor-login-titulo: #fdd835; /* Título amarelo */
+  --cor-label: #fdd835; /* Labels amarelos */
+  --cor-input-bg: #2c2c2c; /* Fundo escuro dos inputs */
+  --cor-input-borda: #555; /* Bordas mais claras */
+  --cor-input-texto: #fff; /* Texto branco nos inputs */
+  --cor-botao: #fbc02d; /* Botão amarelo */
+  --cor-botao-hover: #fdd835; /* Hover ligeiramente diferente */
+  --cor-footer-bg: #333; /* Footer escuro */
+  --cor-footer-texto: #ccc; /* Texto do footer cinza */
+  --cor-footer-link-hover: #fff; /* Links brancos no hover */
+}
+
+/* RESET - Remove estilos padrão dos navegadores */
+* {
+  margin: 0; /* Remove margens */
+  padding: 0; /* Remove paddings */
+  box-sizing: border-box; /* Modelo de caixa mais intuitivo */
+}
+
+/* BODY - Estilos base da página */
+body {
+  font-family: Arial, sans-serif; /* Fonte principal */
+  background-color: var(--cor-fundo-body); /* Usa variável de cor */
+  color: var(--cor-texto-body); /* Cor do texto variável */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  height: 100vh; /* Altura total da viewport */
+  display: flex; /* Layout flex */
+  flex-direction: column; /* Organiza em coluna */
+}
+
+/* HEADER - Estilos do cabeçalho */
+header {
+  background-color: var(--cor-header); /* Cor do header */
+  height: 100px; /* Altura fixa */
+  display: flex; /* Flex para alinhamento */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 0 20px; /* Padding lateral */
+}
+
+/* LOGO - Estilos da imagem do logo */
+.img_logo {
+  margin: 10px 0 10px 10px; /* Margens específicas */
+  padding: 0; /* Sem padding */
+  height: 70px; /* Altura fixa */
+  width: 70px; /* Largura fixa */
+  border-radius: 50%; /* Torna circular */
+  object-fit: cover; /* Garante que a imagem cubra o espaço */
+  border: none; /* Sem borda */
+  box-shadow: none; /* Sem sombra */
+  background-color: transparent; /* Fundo transparente */
+}
+
+/* NAV - Barra de navegação */
+nav {
+  background-color: var(--cor-nav); /* Cor da nav */
+  position: sticky; /* Fixa no topo ao rolar */
+  top: 0; /* Cola no topo */
+  left: 0; /* Alinhamento à esquerda */
+  width: 100%; /* Largura total */
+  display: flex; /* Layout flex */
+  justify-content: center; /* Centraliza os itens */
+  gap: 20px; /* Espaço entre itens */
+  padding: 15px 0; /* Padding vertical */
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* LINKS DA NAV - Estilos dos links de navegação */
+nav a {
+  color: var(--cor-link); /* Cor do link */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: 600; /* Peso da fonte */
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; /* Fontes alternativas */
+  font-size: 1.1rem; /* Tamanho da fonte */
+  padding: 8px 14px; /* Espaçamento interno */
+  margin: 0 6px; /* Margem lateral */
+  border-radius: 6px; /* Bordas arredondadas */
+  transition: all 0.3s ease-in-out; /* Transição suave */
+  display: inline-block; /* Permite padding/margin */
+  letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+
+/* HOVER DOS LINKS - Efeito ao passar o mouse */
+nav a:hover {
+  color: var(--cor-link-hover); /* Muda cor do texto */
+  background-color: var(--cor-link-bg-hover); /* Muda fundo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+}
+
+/* BOTÃO TROCA DE ILUMINAÇÃO - Botão do tema claro/escuro */
+#trocar_iluminacao {
+  position: fixed; /* Fixo na tela */
+  top: 110px; /* Posição abaixo da Nav */
+  right: 30px; /* Distância da direita */
+  background-color: var(--cor-botao-light); /* Cor amarela */
+  color: #000; /* Texto preto */
+  border: none; /* Sem borda */
+  border-radius: 50%; /* Formato circular */
+  padding: 0.8rem; /* Espaçamento interno */
+  font-size: 1.2rem; /* Tamanho do ícone */
+  cursor: pointer; /* Cursor de clique */
+  z-index: 1001; /* Fica acima da nav */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
+  display: flex; /* Flex para centralizar */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  width: 50px; /* Largura fixa */
+  height: 50px; /* Altura fixa */
+  transition: all 0.3s ease; /* Transição suave */
+}
+
+/* HOVER DO BOTÃO - Efeito ao passar o mouse */
+#trocar_iluminacao:hover {
+  background-color: #fff; /* Fundo branco */
+  transform: scale(1.1); /* Aumenta ligeiramente */
+}
+
+/* BOTÃO NO MODO ESCURO - Ajustes para tema escuro */
+body.modo-escuro #trocar_iluminacao {
+  background-color: var(--cor-botao-light); /* Mantém amarelo */
+  color: #000; /* Texto preto */
+}
+
+/* HOVER NO MODO ESCURO - Efeito no tema escuro */
+body.modo-escuro #trocar_iluminacao:hover {
+  background-color: #fff; /* Fundo branco */
+}
+
+/* CONTAINER LOGIN - Área principal do login */
+.login-container {
+  flex: 1; /* Ocupa espaço disponível */
+  display: flex; /* Layout flex */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  background-color: var(--cor-login-container-bg); /* Cor de fundo */
+  padding: 40px 20px; /* Espaçamento interno */
+}
+
+/* CARD DE LOGIN - Estilo do formulário */
+.login-card {
+  background-color: var(--cor-login-card-bg); /* Cor de fundo */
+  padding: 40px; /* Espaçamento interno */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 4px 20px var(--cor-login-boxshadow); /* Sombra */
+  max-width: 400px; /* Largura máxima */
+  width: 100%; /* Largura responsiva */
+}
+
+/* TÍTULO DO LOGIN */
+.login-card h2 {
+  color: var(--cor-login-titulo); /* Cor do título */
+  margin-bottom: 25px; /* Espaço abaixo */
+  text-align: center; /* Centralizado */
+}
+
+/* LABELS DO FORMULÁRIO */
+.login-card label {
+  color: var(--cor-label); /* Cor do label */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 5px; /* Espaço abaixo */
+  display: block; /* Faz ocupar linha inteira */
+}
+
+/* INPUTS DO FORMULÁRIO */
+.login-card input[type="text"],
+.login-card input[type="password"] {
+  padding: 10px; /* Espaçamento interno */
+  width: 100%; /* Largura total */
+  margin-bottom: 20px; /* Espaço abaixo */
+  border: 1px solid var(--cor-input-borda); /* Borda */
+  border-radius: 4px; /* Cantos arredondados */
+  background-color: var(--cor-input-bg); /* Cor de fundo */
+  color: var(--cor-input-texto); /* Cor do texto */
+}
+
+/* BOTÃO DE LOGIN */
+.login-card button {
+  width: 100%; /* Largura total */
+  background-color: var(--cor-botao); /* Cor de fundo */
+  color: #000; /* Texto preto */
+  padding: 12px; /* Espaçamento interno */
+  border: none; /* Sem borda */
+  font-weight: bold; /* Negrito */
+  font-size: medium; /* Tamanho médio */
+  border-radius: 6px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de clique */
+  transition: background-color 0.3s; /* Transição suave */
+}
+
+/* HOVER DO BOTÃO */
+.login-card button:hover {
+  background-color: var(--cor-botao-hover); /* Cor alterada */
+}
+
+/* BOTÃO/LINK VOLTAR */
+.link-voltar {
+  display: inline-block; /* Permite padding */
+  background-color: var(--cor-botao); /* Cor igual aos botões */
+  color: #000; /* Texto preto */
+  padding: 6px 0; /* Espaçamento vertical */
+  font-weight: bold; /* Negrito */
+  border-radius: 6px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de clique */
+  transition: background-color 0.3s; /* Transição suave */
+  text-decoration: none; /* Remove sublinhado */
+  text-align: center; /* Texto centralizado */
+  width: 100%; /* Largura total */
+  margin-top: 10px; /* Espaço acima */
+}
+
+/* HOVER DO LINK VOLTAR */
+.link-voltar:hover {
+  background-color: var(--cor-botao-hover); /* Cor alterada */
+}
+
+/* FOOTER - Rodapé da página */
+footer {
+  background-color: var(--cor-footer-bg); /* Cor de fundo */
+  padding: 20px; /* Espaçamento interno */
+  text-align: center; /* Texto centralizado */
+  color: var(--cor-footer-texto); /* Cor do texto */
+}
+
+/* LINKS DO FOOTER */
+footer a {
+  color: var(--cor-footer-texto); /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+/* HOVER DOS LINKS */
+footer a:hover {
+  color: var(--cor-footer-link-hover); /* Cor alterada */
+  cursor: pointer; /* Cursor de clique */
+}
+
+/* DIVS DO FOOTER */
+footer div {
+  margin: 10px 0; /* Espaçamento vertical */
+}
+
+/* RESPONSIVO - Ajustes para telas pequenas */
+@media (max-width: 500px) {
+  .login-card {
+    padding: 20px; /* Reduz padding em telas pequenas */
+  }
+}

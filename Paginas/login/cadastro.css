@@ -1,0 +1,299 @@
+/* VARIÁVEIS DE TEMA */
+:root {
+  --cor-fundo-body: #fff; /* Cor de fundo padrão da página (modo claro) */
+  --cor-texto-body: #333; /* Cor principal dos textos no modo claro */
+  --cor-header: #fdd835; /* Cor de fundo do cabeçalho (header) */
+  --cor-nav: #fffde7; /* Cor de fundo da barra de navegação */
+  --cor-botao-light: #fbc02d; /* Cor de fundo do botão de troca de tema (claro/escuro) */
+  --cor-link: #fbc02d; /* Cor padrão dos links */
+  --cor-link-hover: #fff; /* Cor do texto dos links ao passar o mouse */
+  --cor-link-bg-hover: #fbc02d; /* Cor de fundo dos links ao passar o mouse */
+  --cor-card-bg: #fff; /* Cor de fundo dos cartões (formulário) */
+  --cor-card-boxshadow: rgba(0, 0, 0, 0.1); /* Cor da sombra dos cartões */
+  --cor-titulo: #fbc02d; /* Cor dos títulos dentro dos cartões */
+  --cor-label: #fbc02d; /* Cor das labels dos campos de formulário */
+  --cor-input-bg: #fff; /* Cor de fundo dos campos de input */
+  --cor-input-borda: #ccc; /* Cor da borda dos inputs */
+  --cor-input-texto: #000; /* Cor do texto dentro dos inputs */
+  --cor-botao: #fbc02d; /* Cor de fundo dos botões */
+  --cor-botao-hover: #fdd835; /* Cor dos botões ao passar o mouse */
+  --cor-footer-bg: #fdd835; /* Cor de fundo do rodapé */
+  --cor-footer-texto: #000; /* Cor do texto no rodapé */
+  --cor-footer-hover: #fff; /* Cor dos links do rodapé ao passar o mouse */
+}
+
+body.modo-escuro {
+  --cor-fundo-body: #121212; /* Cor de fundo da página no modo escuro */
+  --cor-texto-body: #e0e0e0; /* Cor principal dos textos no modo escuro */
+  --cor-header: #333; /* Cor do cabeçalho no modo escuro */
+  --cor-nav: #1e1e1e; /* Cor da barra de navegação no modo escuro */
+  --cor-botao-light: #fbc02d; /* Cor do botão de tema no modo escuro (mantida) */
+  --cor-link: #fdd835; /* Cor dos links no modo escuro */
+  --cor-link-hover: #000; /* Cor dos links ao passar o mouse (modo escuro) */
+  --cor-link-bg-hover: #fdd835; /* Fundo do link ao passar o mouse (modo escuro) */
+  --cor-card-bg: #1f1f1f; /* Cor de fundo dos cartões no modo escuro */
+  --cor-card-boxshadow: rgba(255, 255, 255, 0.05); /* Sombra sutil dos cartões no modo escuro */
+  --cor-titulo: #fdd835; /* Cor dos títulos no modo escuro */
+  --cor-label: #fdd835; /* Cor das labels no modo escuro */
+  --cor-input-bg: #2c2c2c; /* Cor de fundo dos inputs no modo escuro */
+  --cor-input-borda: #555; /* Cor da borda dos inputs no modo escuro */
+  --cor-input-texto: #fff; /* Cor do texto dentro dos inputs no modo escuro */
+  --cor-botao: #fbc02d; /* Cor do botão no modo escuro */
+  --cor-botao-hover: #fdd835; /* Cor do botão ao passar o mouse no modo escuro */
+  --cor-footer-bg: #333; /* Cor de fundo do rodapé no modo escuro */
+  --cor-footer-texto: #ccc; /* Cor do texto no rodapé (modo escuro) */
+  --cor-footer-hover: #fff; /* Cor do texto no hover (modo escuro) */
+}
+
+/* RESET */
+* {
+  margin: 0; /* Remove margens padrão de todos os elementos */
+  padding: 0; /* Remove preenchimentos padrão */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo de tamanho */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Define a fonte principal */
+  background-color: var(--cor-fundo-body); /* Usa a variável de cor de fundo do corpo */
+  color: var(--cor-texto-body); /* Usa a cor padrão do texto */
+  line-height: 1.6; /* Altura da linha para melhor legibilidade */
+  height: 100vh; /* Altura total da viewport */
+  display: flex; /* Define o layout como flexível */
+  flex-direction: column; /* Organiza os elementos verticalmente */
+}
+
+/* HEADER */
+header {
+  background-color: var(--cor-header); /* Cor de fundo do cabeçalho */
+  height: 100px; /* Altura fixa do cabeçalho */
+  display: flex; /* Layout flexível */
+  align-items: center; /* Centraliza os itens verticalmente */
+  padding: 0 20px; /* Espaçamento horizontal interno */
+}
+
+/* LOGO */
+.img_logo {
+  margin: 10px 0 10px 10px; /* Margem ao redor da imagem */
+  padding: 0; /* Sem espaçamento interno */
+  height: 70px; /* Altura da imagem */
+  width: 70px; /* Largura da imagem */
+  border-radius: 50%; /* Torna a imagem circular */
+  object-fit: cover; /* Garante que a imagem preencha sem distorcer */
+  border: none; /* Remove borda */
+  box-shadow: none; /* Sem sombra */
+  background-color: transparent; /* Fundo transparente */
+}
+
+/* NAV */
+nav {
+  background-color: var(--cor-nav); /* Cor de fundo da navegação */
+  position: sticky; /* Fixa a barra no topo ao rolar */
+  top: 0; /* Alinha ao topo da página */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Largura total */
+  display: flex; /* Layout flexível */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 20px; /* Espaço entre os links */
+  padding: 15px 0; /* Espaço vertical interno */
+  z-index: 1000; /* Prioridade de empilhamento */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra leve inferior */
+}
+
+nav a {
+  color: var(--cor-link); /* Cor padrão dos links */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: 600; /* Texto em negrito */
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; /* Fonte personalizada */
+  font-size: 1.1rem; /* Tamanho da fonte */
+  padding: 8px 14px; /* Espaçamento interno do link */
+  margin: 0 6px; /* Espaçamento entre os links */
+  border-radius: 6px; /* Bordas arredondadas */
+  transition: all 0.3s ease-in-out; /* Transição suave */
+  display: inline-block; /* Permite espaçamento e alinhamento */
+  letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+
+nav a:hover {
+  color: var(--cor-link-hover); /* Cor do texto ao passar o mouse */
+  background-color: var(--cor-link-bg-hover); /* Fundo ao passar o mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+nav a.active {
+  color: var(--cor-link-hover); /* Cor do link ativo */
+  background-color: var(--cor-link-bg-hover); /* Fundo do link ativo */
+}
+
+/* BOTÃO TROCA DE ILUMINAÇÃO */
+#trocar_iluminacao {
+  position: fixed; /* Fixa o botão na tela */
+  top: 110px; /* Distância do topo */
+  right: 30px; /* Distância da direita */
+  background-color: var(--cor-botao-light); /* Cor de fundo */
+  color: #000; /* Cor do ícone */
+  border: none; /* Remove a borda */
+  border-radius: 50%; /* Botão redondo */
+  padding: 0.8rem; /* Espaçamento interno */
+  font-size: 1.2rem; /* Tamanho do ícone */
+  cursor: pointer; /* Muda o cursor para ponteiro */
+  z-index: 1001; /* Empilhamento acima da navegação */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra ao redor */
+  display: flex; /* Alinha conteúdo */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Alinha horizontalmente */
+  width: 50px; /* Largura do botão */
+  height: 50px; /* Altura do botão */
+  transition: all 0.3s ease; /* Transição suave */
+}
+
+#trocar_iluminacao:hover {
+  background-color: #fff; /* Cor ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o botão levemente */
+}
+
+body.modo-escuro #trocar_iluminacao {
+  background-color: var(--cor-botao-light); /* Cor no modo escuro */
+  color: #000; /* Cor do ícone */
+}
+
+body.modo-escuro #trocar_iluminacao:hover {
+  background-color: #fff; /* Cor de fundo ao passar o mouse */
+}
+
+/* CONTAINER DE CADASTRO */
+.cadastro-container {
+  flex: 1; /* Ocupa o espaço restante */
+  display: flex; /* Layout flexível */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  background-color: var(--cor-fundo-body); /* Cor de fundo do container */
+  padding: 40px 20px; /* Espaçamento interno */
+}
+
+/* CARD DE CADASTRO */
+.cadastro-card {
+  background-color: var(--cor-card-bg); /* Cor de fundo do cartão */
+  padding: 40px; /* Espaçamento interno */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 4px 20px var(--cor-card-boxshadow); /* Sombra ao redor */
+  max-width: 500px; /* Largura máxima */
+  width: 100%; /* Largura total até o máximo */
+}
+
+.cadastro-card h2 {
+  color: var(--cor-titulo); /* Cor do título */
+  margin-bottom: 25px; /* Espaçamento inferior */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* CAMPOS */
+.cadastro-card label {
+  color: var(--cor-label); /* Cor da label */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 5px; /* Espaçamento inferior */
+  display: block; /* Ocupa linha inteira */
+}
+
+.cadastro-card input[type="text"],
+.cadastro-card input[type="email"],
+.cadastro-card input[type="tel"],
+.cadastro-card input[type="password"] {
+  padding: 10px; /* Espaçamento interno */
+  width: 100%; /* Largura total */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  border: 1px solid var(--cor-input-borda); /* Borda do campo */
+  border-radius: 4px; /* Bordas arredondadas */
+  background-color: var(--cor-input-bg); /* Cor de fundo do campo */
+  color: var(--cor-input-texto); /* Cor do texto digitado */
+}
+
+/* RADIO BUTTONS */
+.radio-group {
+  display: flex; /* Layout flexível */
+  gap: 20px; /* Espaço entre os elementos */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.radio-label {
+  display: flex; /* Layout flexível */
+  align-items: center; /* Alinha verticalmente */
+  gap: 8px; /* Espaço entre botão e texto */
+  cursor: pointer; /* Muda cursor ao passar por cima */
+}
+
+.radio-label input[type="radio"] {
+  accent-color: var(--cor-botao); /* Cor do botão de opção */
+}
+
+/* BOTÃO DE CADASTRO */
+.cadastro-card button {
+  width: 100%; /* Largura total */
+  background-color: var(--cor-botao); /* Cor de fundo */
+  color: #000; /* Cor do texto */
+  padding: 12px; /* Espaçamento interno */
+  border: none; /* Remove borda */
+  font-weight: bold; /* Texto em negrito */
+  font-size: medium; /* Tamanho da fonte */
+  border-radius: 6px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda cursor */
+  transition: background-color 0.3s; /* Transição suave */
+  margin-top: 10px; /* Espaçamento superior */
+}
+
+.cadastro-card button:hover {
+  background-color: var(--cor-botao-hover); /* Cor ao passar o mouse */
+}
+
+/* LINK VOLTAR */
+.link-voltar {
+  display: inline-block; /* Permite layout personalizado */
+  background-color: var(--cor-botao); /* Cor de fundo */
+  color: #000; /* Cor do texto */
+  padding: 6px 0; /* Espaçamento vertical */
+  font-weight: bold; /* Negrito */
+  border-radius: 6px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor pointer */
+  transition: background-color 0.3s; /* Transição suave */
+  text-decoration: none; /* Remove sublinhado */
+  text-align: center; /* Centraliza o texto */
+  width: 100%; /* Ocupa toda a largura */
+  margin-top: 10px; /* Espaçamento superior */
+}
+
+.link-voltar:hover {
+  background-color: var(--cor-botao-hover); /* Cor ao passar o mouse */
+}
+
+/* RODAPÉ */
+footer {
+  background-color: var(--cor-footer-bg); /* Cor de fundo do rodapé */
+  padding: 20px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+  color: var(--cor-footer-texto); /* Cor do texto */
+}
+
+footer a {
+  color: var(--cor-footer-texto); /* Cor dos links no rodapé */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+footer a:hover {
+  color: var(--cor-footer-hover); /* Cor ao passar o mouse */
+  cursor: pointer; /* Cursor pointer */
+}
+
+footer div {
+  margin: 10px 0; /* Espaçamento vertical */
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .cadastro-card {
+    padding: 20px; /* Reduz o padding em telas pequenas */
+  }
+
+  .radio-group {
+    flex-direction: column; /* Alinha os botões verticalmente */
+    gap: 10px; /* Espaçamento entre botões */
+  }
+}

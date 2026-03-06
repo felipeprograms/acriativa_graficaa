@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte</title>
+    <link rel="stylesheet" href="suporte.css">
+    <link rel="shortcut icon" href="/Imagens/logo_empresa.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div>
+            <img class="img_logo" src="/Imagens/logo_empresa.png" alt="Logo da Empresa">
+        </div>
+    </header>
+
+    <!-- NAVEGAÇÃO -->
+    <nav>
+        <a href="/index.html">Início</a>
+        <a href="/Paginas/produto/produto.html">Produtos</a>
+        <div class="div_flex">
+            <button id="trocar_iluminacao" onclick="alternarModo()"><i id="lampadaEscura" class="fa-solid fa-lightbulb"></i></button>
+        </div>
+    </nav>
+
+    <!-- CONTAINER DE SUPORTE CENTRALIZADO -->
+    <div class="suporte-container">
+        <div class="suporte-card">
+            <h2>Entre em contato com nossa equipe</h2>
+            <form action="/index.html">
+                <label for="nome">* Cliente:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="servico">*Serviço Relacionado:</label><br>
+                <select id="servico" name="servico" required>
+                    <option value="">-- Selecione --</option>
+                    <option value="incorreta">Quantidade Incorreta</option>
+                    <option value="corte">Erro de Corte</option>
+                    <option value="defeito">Impressão Defeituosa</option>
+                    <option value="nao_finalizado">Produto não finalizado</option>
+                    <option value="arte">Erro na arte</option>
+                    <option value="outro">Outro</option>
+                </select><br><br>
+
+                <label for="descricao">* Descreva o problema:</label>
+                <textarea id="descricao" name="descricao" rows="5" required></textarea>
+
+                <label for="urgencia">* Urgência:</label>
+                <select id="urgencia" name="urgencia" required>
+                    <option value="">-- Selecione --</option>
+                    <option value="baixa">Baixa</option>
+                    <option value="media">Média</option>
+                    <option value="alta">Alta</option>
+                </select>
+
+                <button onclick="enviar()" type="submit">Enviar</button>
+                <a class="link-voltar" href="/index.html">← Voltar</a>
+            </form>
+        </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div>
+            <h3>Sobre nós</h3>
+            <p>Gráfica especializada em impressões de alta qualidade e soluções criativas.</p>
+        </div>
+
+        <div>
+            <h3>Redes sociais</h3>
+            <a href="https://www.instagram.com/acriativagraf/" target="_blank">Instagram</a><br>
+            <a href="https://wa.me/5571985077119?text=Olá%2C%20gostaria%20de%20mais%20informações!"
+                target="_blank">WhatsApp</a><br>
+            <a href="https://www.google.com/maps/place/A+Criativa+Gráfica+Rápida/@-12.976092,-38.4953796,19z/data=!3m1!4b1!4m6!3m5!1s0x71604cfe29fda07:0x352d3ac0cf9034d3!8m2!3d-12.9760933!4d-38.4947345!16s%2Fg%2F1ptydl3cg?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">Localização: Matatu de Brotas - Salvador/BA</a><br>
+            <a href="https://www.google.com/maps/place/A+Criativa+Gráfica+Rápida+2+Nova+Brasília/@-12.9187167,-38.4111908,17z/data=!3m1!4b1!4m6!3m5!1s0x71611b4ff86e5eb:0x5c8427a440bc6816!8m2!3d-12.9187219!4d-38.4086105!16s%2Fg%2F11mhjtlxtj?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">Localização: Nova Brasilia - Salvador/BA</a><br>
+            <a href="https://github.com/Tiago-Aragao/AVA1_FrontEndGT.git" target="_blank">GitHub</a>
+        </div>
+
+        <div>
+            <p>&copy; 2025 A Criativa Gráfica</p>
+        </div>
+    </footer>
+
+    <script src="/modoescuro.js"></script>
+    <script src="suporte.js"></script>
+</body>
+
+</html>
